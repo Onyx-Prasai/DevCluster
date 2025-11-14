@@ -31,9 +31,9 @@ class Clustering:
     
     def __init__(self,
                  data: pd.DataFrame,
-                 selected_features: list,
-                 number_of_clusters: int,
-                 random_state: int):
+                 selected_features: list=None,
+                 number_of_clusters: int=None,
+                 random_state: int=None):
         """
         Initializes the Clustering class with the given dataset, selected features, 
         number of clusters, and random state for reproducibility.
@@ -62,7 +62,7 @@ class Clustering:
         X_final (np.ndarray): The processed and scaled data with missing values imputed.
         """
         # Extract useful info only
-        X = self.data[self.selected_features]
+        X = self.data[self.selected_features].copy()
         X.replace([np.inf, -np.inf], np.nan, inplace=True)
 
         # Scaling 
