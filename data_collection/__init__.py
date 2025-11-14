@@ -1,0 +1,1 @@
+from .fetch_details import GitHubDataExtractor
