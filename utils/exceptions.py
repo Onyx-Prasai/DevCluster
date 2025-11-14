@@ -32,7 +32,7 @@ class APIError(Exception):
             return f"APIError {self.status_code}: {self.message}"
         return f"APIError: {self.message}"
     
-class configError(Exception):
+class ConfigError(Exception):
     """
     custom exception for configuration errors
     
