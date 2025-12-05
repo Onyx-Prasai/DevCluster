@@ -189,4 +189,4 @@ Once the container is running, you can:
 - Review analysis notebooks in `./notebooks/`
 - Modify code and run again (especially in dev mode for instant feedback)
 
-For more details on the DevCluster application itself, see [README.md](README.md).
+For more details on the DevCluster application itself, see [README.md](README.md) . 
