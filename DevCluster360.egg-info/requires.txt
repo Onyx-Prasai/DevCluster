@@ -6,7 +6,7 @@ PyGithub
 matplotlib
 seaborn
 plotly
+streamlit
 python-dotenv
 joblib
 tqdm
--e .

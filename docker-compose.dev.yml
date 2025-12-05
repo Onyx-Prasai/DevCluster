@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  devcluster:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: devcluster-dev
+    environment:
+      - GITHUB_API_TOKEN=${GITHUB_API_TOKEN}
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - .:/app
+      - /app/__pycache__
+    working_dir: /app
+    command: python main.py
+    stdin_open: true
+    tty: true
