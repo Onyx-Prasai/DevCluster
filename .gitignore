@@ -12,6 +12,10 @@ venv/
 .venv/
 env/
 
+# Project data and models (do not commit large files)
+data/
+models/
+
 # Editor directories
 .vscode/
 .idea/
