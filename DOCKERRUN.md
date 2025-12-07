@@ -188,5 +188,33 @@ Once the container is running, you can:
 - Check trained models in `./models/`
 - Review analysis notebooks in `./notebooks/`
 - Modify code and run again (especially in dev mode for instant feedback)
+ 
+Note: `data/` and `models/` are intentionally not tracked in the repository. After cloning,
+follow one of the options below to provide data and models before running the app.
 
-For more details on the DevCluster application itself, see [README.md](README.md) . 
+How to get data and models after cloning:
+
+- Option A — Run the trainer (recommended):
+
+   1. Create and activate a virtual environment and install dependencies:
+
+       ```powershell
+       python -m venv .venv
+       .\.venv\Scripts\Activate.ps1
+       pip install -r requirements.txt
+       ```
+
+   2. Run the training script to generate model artifacts in `./models/`:
+
+       ```powershell
+       python training/trainer.py
+       ```
+
+   3. The generated model files will appear in `./models/` and will be used by `main.py`.
+
+- Option B — Provide your own data and model files:
+
+   - Place raw JSON data files under `./data/raw/` (create the folders if they don't exist).
+   - Place model `.joblib` files under `./models/`.
+
+For more details on the DevCluster application itself, see [README.md](README.md).
