@@ -39,8 +39,8 @@ scores = {
     1: (85.0, 100.0)  
 }
 
-# Path to store raw data
-file_path = "/home/khagendra/Projects/python/Dev/data/raw"
+# Path to store raw data (cross-platform compatible)
+file_path = os.path.join(os.path.dirname(__file__), "data", "raw")
 
 def extract_user_data(user_name: str, token: str, output_path: str) -> None:
     """

@@ -1,3 +1,21 @@
 *__pycache__
 *.env
 DevCluster_env
+# Python packaging / build artifacts
+*.egg-info/
+*.egg-info
+build/
+dist/
+
+# Virtual envs
+venv/
+.venv/
+env/
+
+# Project data and models (do not commit large files)
+data/
+models/
+
+# Editor directories
+.vscode/
+.idea/
